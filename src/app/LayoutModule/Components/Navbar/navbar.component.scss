@@ -1,0 +1,63 @@
+// Navbar Style
+
+//Variables
+@import "../../../../assets/styles/helpers/variables";
+
+//Mixins
+@import "../../../../assets/styles/helpers/mixins";
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    background: #fff;
+    @include prefixer(box-shadow, 2px 3px 10px 0px rgba(0,0,0,0.1), webkit moz o ms);
+    @include prefixer(transition, top .5s ease-in-out, webkit moz o ms);
+    position: relative;
+    .add {
+        width: 50px;
+        height: 50px;
+        background: $primaryColor;
+        @include bRadius(50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: absolute;
+        top: -19%;
+        aspect-ratio: 1;
+        --size: 4rem;
+        --border: calc(var(--size) / 15);
+        border: var(--border) solid #f5fafc;
+        @include prefixer(box-shadow, 2px 3px 10px 0px #f5fafc, webkit moz o ms);
+        mat-icon {
+            color: #000;
+            width: 30px;
+            height: 30px;
+            font-size: 30px;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            height: 1.2rem;
+            aspect-ratio: 1;
+            background-color: transparent;
+            top: 28%;
+            left: calc((var(--border) + 1.09rem) * -1);
+            border-top-right-radius: 2rem;
+            box-shadow: 2px -0.5rem #f5fafc;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            height: 1.2rem;
+            aspect-ratio: 1;
+            background-color: transparent;
+            top: 28%;
+            right: calc((var(--border) + 1.09rem) * -1);
+            border-top-left-radius: 2rem;
+            box-shadow: -2px -0.5rem #f5fafc;
+        }
+    }
+}

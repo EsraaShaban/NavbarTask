@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* Helpers */
+
+//Variables
+@import "assets/styles/helpers/variables";
+
+//Mixins
+@import "assets/styles/helpers/mixins";
+
+* {
+  @include prefixer(box-sizing, border-box, webkit moz o ms);
+}
+
+html, body { margin: 0; padding: 0;}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:not([href]):not([tabindex]),
+a:hover,
+a:not([href]):not([tabindex]):hover {
+  text-decoration: none;
+  color: $primaryColor;
+  cursor: pointer;
+}
+
+body,
+*,
+a,
+span,
+strong,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li {
+  font-family: $mainFont;
+}

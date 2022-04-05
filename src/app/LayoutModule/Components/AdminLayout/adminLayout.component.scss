@@ -1,0 +1,15 @@
+// Layout Style
+
+.layout {
+  .welcome {
+    background: rgb(245, 250, 252);
+    padding: 20px 0;
+    text-align: center;
+  }
+  .content {
+    background: rgb(245, 250, 252);
+    padding: 30px;
+    min-height: calc(100vh - 185px);
+    text-align: center;
+  }
+}

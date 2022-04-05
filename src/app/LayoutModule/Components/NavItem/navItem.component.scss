@@ -1,0 +1,24 @@
+// NavItem Style
+
+//Variables
+@import "../../../../assets/styles/helpers/variables";
+
+a {
+    color: $secondaryColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &.active {
+        color: #000;
+    }
+    @media(max-width: 767px) {
+        font-size: 12px;
+    }
+    mat-icon {
+        color: $secondaryColor;
+        &.active {
+            color: $primaryColor;
+        } 
+    }
+}
